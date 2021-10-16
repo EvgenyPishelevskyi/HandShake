@@ -1,0 +1,126 @@
+/*Основные стили*/
+
+/*Слайдер*/
+.slick-slider {
+   min-width: 0;
+}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {}
+
+/* Слайдер с точками */
+.slick-slider.slick-dotted {}
+
+/* Ограничивающая оболочка */
+.slick-list {
+   overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+   display: flex;
+   align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {}
+
+/* Слайд основной */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрелка */
+.slick-arrow {}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {}
+
+/* Точки (булиты) */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активная точка */
+.slick-dots li.slick-active {}
+
+/* Элемент точки */
+.slick-dots li button {}
+
+/*Конкретный слайдер*/
+
+.slider {
+   max-width: 1026px;
+  
+   display: flex;
+   margin: 0 auto;
+   padding: 67px 35px 60px 35px;
+   background-color: $whiteColor;
+
+   @media (max-width: $md4 +120.02px) {
+      padding: 30px 35px;
+      position: relative;
+      bottom: -150px;
+      flex-direction: column;
+    
+   }
+}
+
+.slider .slick-track {
+   height: 100%;
+   display: flex;
+   align-items: flex-start;
+}
+
+.slider .slick-dots {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   bottom: -88px;
+   right: 7px;
+   z-index: 2;
+}
+
+.slider .slick-dots li {
+   list-style: none;
+   margin: 0px 10px;
+}
+
+.slider .slick-dots button {
+   font-size: 0px;
+   width: 15px;
+   height: 15px;
+   background: rgba(255, 255, 255, 0.2);
+   border: 2px solid #FFFFFF;
+   border-radius: 7.5px;
+
+   @media (max-width: $md4 +120.02px) {
+      
+      background: rgba(153,169,180,.2);
+      border: 2px solid #99a9b4;
+   }
+}
+
+.slider .slick-dots li.slick-active button {
+   background: #99a9b4;
+}
+
+.slider__item {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
