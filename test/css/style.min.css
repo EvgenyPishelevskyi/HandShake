@@ -737,7 +737,7 @@ textarea.input {
 
 .info {
   padding: 34px 0px 0px 0px;
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -930,7 +930,7 @@ textarea.input {
 
 .slideer {
   padding: 0px 0px 142px 0px;
-  background-image: url("../img/bg2.png");
+  background-image: url("../img/bg2.webp");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   background-size: cover;
@@ -1158,7 +1158,7 @@ textarea.input {
 }
 
 .career__main {
-  background-image: url("../img/bg3.png");
+  background-image: url("../img/bg3.webp");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
@@ -1259,7 +1259,7 @@ textarea.input {
 .mobile-app {
   padding: 93px 0px 0px 0px;
   background: #EBEEF3;
-  background-image: url("../img/mobile.png");
+  background-image: url("../img/mobile.webp");
   background-repeat: no-repeat;
   background-position: 511px 342px;
 }
