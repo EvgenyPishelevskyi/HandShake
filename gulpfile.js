@@ -2,6 +2,7 @@
 let { src, dest } = require("gulp");
 let fs = require('fs');
 let gulp = require("gulp");
+var ghPages = require('gulp-gh-pages');
 let browsersync = require("browser-sync").create();
 let autoprefixer = require("gulp-autoprefixer");
 let scss = require('gulp-sass')(require('sass'));
