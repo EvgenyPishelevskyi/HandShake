@@ -19,9 +19,7 @@
          position: absolute;
          content: "";
          background-image: url('../img/arrow.svg');
-         background-repeat: no-repeat;
-         background-position: center center;
-         background-size: cover;
+         @include background-image;
          width: 11.86px;
          height: 9.05px;
          left: 140px;
@@ -38,58 +36,59 @@
 .info {
    padding: 34px 0px 0px 0px;
    background-image: url('../img/bg.webp');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
+   @include background-image;
 
 
-   @media (max-width: $md1 +px) {
+   @media (max-width: ($md1 +px)) {
       background-position: top left;
    }
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       background-position: -100px 0px
    }
 
-   @media (max-width: $md3 +px) {
+   @media (max-width: ($md3 +px)) {
       background-position: -184px 0px;
    }
 
-   @media (max-width: $md4 +px) {
+   @media (max-width: ($md4 +px)) {
       background-position: -280px 0px;
    }
 }
 
-.main__title {
+.title {
+   margin: 0 auto;
    display: block;
    width: 34%;
-   margin: 0 auto;
-   padding: 0px 0px 12px 0px;
-   font-size: 40px;
+   @include adaptive-font (40, 16);
+   line-height: calc(48 / 40);
    font-weight: 700;
-   line-height: 48px;
+}
+
+.main__title {
+   padding: 0px 0px 12px 0px;
    transform: translateY(-50px);
    opacity: 0;
 
 
-   @media (max-width: $md2 +12.02px) {
+   @media (max-width: ($md2 +12.02px)) {
       width: 50%;
    }
 
-   @media (max-width: $md3+177.02px) {
+   @media (max-width: ($md3+177.02px)) {
       width: 60%;
    }
 
-   @media (max-width: $md4+49.02px) {
+   @media (max-width:($md4+49.02px)) {
       width: 80%;
    }
 }
 
 .main__descr {
-   display: block;
    padding: 0px 0px 0px 0px;
-   font-size: 27px;
-   line-height: 40px;
+   display: block;
+   @include adaptive-font (27, 16);
+   line-height: calc(40 / 27);
    transform: translateY(-50px);
    opacity: 0;
 }
@@ -101,16 +100,15 @@
 }
 
 .input-intro {
-   margin: 0px 27px 0px 0px;
    padding: 13px 118px 13px 22px;
+   margin: 0px 27px 0px 0px;
    font-size: 16px;
    line-height: 20px;
    color: #00000033;
 
-   @media (max-width: $md4 + 10px) {
+   @media (max-width: ($md4 + 10px)) {
       margin: 0px 0px 10px 0px;
    }
-
 }
 
 .button {
@@ -132,7 +130,6 @@
    transform: translateY(-50px);
    opacity: 0;
 }
-
 
 .element-show {
    transition: all 1s ease;

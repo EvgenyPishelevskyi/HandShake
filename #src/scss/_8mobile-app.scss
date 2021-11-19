@@ -5,12 +5,12 @@
    background-repeat: no-repeat;
    background-position: 511px 342px;
 
-   @media (max-width: $md3 +32.02px) {
+   @media (max-width: ($md3 +32.02px)) {
       padding: 60px 0px 0px 0px;
       background-position: 80px 600px;
    }
 
-   @media (max-width: $md4 +2.02px) {
+   @media (max-width: ($md4 +2.02px)) {
       padding: 40px 0px 0px 0px;
       background-position: -30px 600px;
    }
@@ -18,49 +18,39 @@
 
 .mobile-app__title {
    padding: 0px 0px 35px 0px;
-   font-size: 40px;
-   font-weight: 700;
-   line-height: 48px;
-   text-align: center;
 }
 
 .mobile-app__descr {
-   display: block;
-   margin: 0 auto;
    padding: 0px 0px 137px 0px;
    width: 40%;
-   font-size: 22px;
-   line-height: 32px;
-   text-align: center;
 
-   @media (max-width: $md3 +100.02px) {
+   @media (max-width: ($md3 +100.02px)) {
       width: 70%;
       padding: 0px 0px 87px 0px;
    }
 
-   @media (max-width: $md4 +10.02px) {
-      width: 90%;
+   @media (max-width: ($md4 +10.02px)) {
       padding: 0px 0px 87px 0px;
+      width: 90%;
    }
 }
 
 .mobile-app__apps {
-   display: flex;
-   margin-left: 83px;
    padding: 8px 10px 187px 10px;
+   margin-left: 83px;
+   display: flex;
 
-   @media (max-width: $md3 +42.02px) {
-      margin: 0px 0px 0px 0px;
+   @media (max-width: ($md3 +42.02px)) {
       padding: 8px 10px 500px 10px;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      margin: 0px 0px 0px 0px;
+      @include column-center;
    }
 }
 
 .appstore {
    margin-right: 40px;
-   @media (max-width: $md3 +32.02px) {
+
+   @media (max-width: ($md3 +32.02px)) {
       position: relative;
       left: 20px;
       margin-bottom: 20px;

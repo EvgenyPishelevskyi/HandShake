@@ -4,16 +4,14 @@
 }
 
 .header__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include center-between;
 }
 
 .header-top__list {
 	display: flex;
 	padding: 0.9rem 0rem 0.9rem 0rem;
 
-	@media (max-width: $md3+px) {
+	@media (max-width: ($md3+px)) {
 		height: 56.78px;
 	}
 }
@@ -21,7 +19,7 @@
 .logo-md3 {
 	display: none;
 
-	@media (max-width: $md3+px) {
+	@media (max-width: ($md3+px)) {
 		display: block;
 	}
 }
@@ -34,7 +32,7 @@
 		margin-right: 0rem;
 	}
 
-	@media (max-width: $md3+px) {
+	@media (max-width: ($md3+px)) {
 		display: none;
 	}
 }
@@ -47,10 +45,9 @@
 	transition: all 0.25s ease;
 
 	&:hover {
-	color:red;
+		color: red;
 	}
 }
-
 
 .header__link {
 	font-size: 0.9rem;
@@ -58,7 +55,7 @@
 	line-height: 1.8rem;
 	color: $whiteColor;
 
-	@media (max-width: $md3+px) {
+	@media (max-width: ($md3+px)) {
 		display: none;
 	}
 }
@@ -67,13 +64,13 @@
 	background-color: $whiteColor;
 
 
-	@media (max-width: $md3+px) {
+	@media (max-width: ($md3+px)) {
 		display: none;
 	}
 
 	.header-bottom__list {
-		display: flex;
 		padding: 27px 136px 28px 0px;
+		display: flex;
 
 		li {
 			margin-right: 30px;
@@ -103,7 +100,7 @@
 .mobile div {
 	display: block;
 	position: absolute;
-	top:5px;
+	top: 5px;
 	right: 16px;
 	background-color: #337AB7;
 	height: 40px;
@@ -115,6 +112,7 @@
 	cursor: pointer;
 	box-sizing: content-box;
 }
+
 .mobile div span {
 	display: block;
 	position: absolute;
@@ -126,25 +124,32 @@
 	border-radius: 13px;
 	transition-duration: .4s;
 }
+
 .mobile div span:nth-child(1) {
 	top: 12px;
 }
+
 .mobile div span:nth-child(2) {
 	top: 20px;
 }
+
 .mobile div span:nth-child(3) {
 	bottom: 8px;
 }
+
 .mobile div.active span:nth-child(1) {
 	transform: translate(-15px, 8px) rotate(-45deg);
 }
+
 .mobile div.active span:nth-child(2) {
 	transition-duration: 0s;
 	opacity: 0;
 }
+
 .mobile div.active span:nth-child(3) {
 	transform: translate(-15px, -8px) rotate(45deg);
 }
+
 .mobile nav {
 	padding: 134px 80px 80px 80px;
 	position: absolute;
@@ -161,6 +166,7 @@
 	justify-content: left;
 	overflow: hidden;
 }
+
 .mobile nav.open {
 	background-color: #0b5257;
 	width: 100vw;
@@ -169,6 +175,7 @@
 	bottom: 0px;
 	border-radius: 0;
 }
+
 .mobile nav ul {
 	display: none;
 }
@@ -180,6 +187,7 @@
 	margin: 80px 0px 0px 0px;
 	padding: 0;
 }
+
 .mobile ul li {
 	background-color: transparent;
 	width: 100%;
@@ -189,9 +197,11 @@
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
+
 .mobile ul li:not(:last-child) {
 	margin-bottom: 22px;
 }
+
 .mobile ul li a {
 	display: flex;
 	margin: 0px 0px 20px 0px;
@@ -206,19 +216,19 @@
 
 @keyframes fadein {
 	0% {
-		 opacity: 0;
-		  
+		opacity: 0;
+
 	}
+
 	100% {
-		 opacity: 1;
+		opacity: 1;
 	}
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
 	.mobile {
-		 display: none;
+		display: none;
 	}
 }
 
 //Burger
-
